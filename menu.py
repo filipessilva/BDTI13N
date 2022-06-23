@@ -30,6 +30,9 @@ def operacao():
             #Chamar o metodo inserir
             operacoes.inserir(nome,telefone,endereco,dtNasc)
 
+        elif this.opcao == 2:
+            operacoes.consultar()
+
 
         else:
             print('Opção escolhida não é valida!')

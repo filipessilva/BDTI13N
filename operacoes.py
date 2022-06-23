@@ -27,7 +27,7 @@ def consultar():
         con.execute(sql)
 
         for(codigo, nome, telefone, endereco, dataDeNascimento) in con:
-            print('Codigo: {}, Nome: {}, Telefone: {}, Endereco: {}, Data de Nascimento:'.format(codigo, nome, telefone, endereco, dataDeNascimento))
+            print('Codigo: {}, Nome: {}, Telefone: {}, Endereco: {}, Data de Nascimento: {}'.format(codigo, nome, telefone, endereco, dataDeNascimento))
         print('\n')
     except Exception as erro:
         print (erro)
