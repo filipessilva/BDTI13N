@@ -1,19 +1,24 @@
 import operacoes
 import this
-this.opcao = 0
+this.opcao = -1
 
 
 def menu():
     print('\n Escolha uma das opções abaixo: \n\n'+
           '1. Cadastrar\n'+
           '2. Consultar\n'+
-          '0.Sair')
+          '0. Sair')
     this.opcao = int(input())
 
-def operacoes():
+def operacao():
     while(this.opcao != 0):
+
         menu()
-        if this.opcao == 1:
+
+        if this.opcao == 0:
+            print ('Obrigado!')
+
+        elif this.opcao == 1:
             print('Informe seu nome:')
             nome = input()
             print('Informe seu telefone:')
@@ -25,7 +30,6 @@ def operacoes():
             #Chamar o metodo inserir
             operacoes.inserir(nome,telefone,endereco,dtNasc)
 
-        elif this.opcao ==2:
 
         else:
             print('Opção escolhida não é valida!')
