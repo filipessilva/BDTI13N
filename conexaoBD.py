@@ -3,7 +3,7 @@ from mysql.connector import errorcode #trata as "exceções" (erros)
 
 def conectar():
     try:
-        db_connection = mysql.connector.connect(hot='localhost', user = 'root', password= '', database= 'bdti13n')
+        db_connection = mysql.connector.connect(host='localhost', user='root', password='', database='bdti13n')
 
         print ('Conectado!')
         return db_connection
@@ -14,5 +14,5 @@ def conectar():
             print ('Usuario ou senha incorreto, {}'.format(erro))
         else:
             print(erro)
-    else: 
+    else:
         db_connection.close()
