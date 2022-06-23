@@ -31,3 +31,12 @@ def consultar():
         print('\n')
     except Exception as erro:
         print (erro)
+
+def atualizar(cod, campo, novoDado):
+    try:
+        sql = "update pessoa set {} = '{}' where codigo = '{}'".format(campo, novoDado, cod)
+        con.execute(sql)
+        db_connection.commit()
+        print('{} Atualizado'.format(con.rowcount))
+    except Exception as erro:
+        print(erro)
